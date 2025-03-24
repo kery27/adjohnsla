@@ -12,13 +12,13 @@
         }
 
         body {
-            background: linear-gradient(135deg, #e0e7ff, #f5f7fa); /* 부드러운 블루-그레이 톤 */
-            color: #333; /* 텍스트 색상 약간 어둡게 */
+            background: #f8eee1;
+            color: #333;
             line-height: 1.6;
         }
 
         header {
-            background: #b3cde0; /* 연한 블루 톤으로 변경 */
+            background: #fbb04c;
             color: #333;
             padding: 2rem;
             text-align: center;
@@ -26,12 +26,12 @@
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 4.5rem;
             margin-bottom: 0.5rem;
         }
 
         nav {
-            background: #6497b1; /* 중간 블루 톤으로 전문성 강조 */
+            background: #f8eee1; /* 중간 블루 톤으로 전문성 강조 */
             padding: 1rem;
             position: sticky; /* 네비게이션 고정 */
             top: 0;
@@ -46,14 +46,10 @@
         }
 
         nav a {
-            color: #fff; /* 흰색으로 변경해 대비 강화 */
+            color: #000; /* 흰색으로 변경해 대비 강화 */
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ff8a65; /* 기존 포인트 색상 유지 */
         }
 
         .container {
@@ -112,7 +108,7 @@
         }
 
         .feature-card h3 {
-            color: #0288d1; /* 전문적인 블루 톤으로 변경 */
+
             margin-bottom: 1rem;
         }
 
@@ -141,19 +137,21 @@
     </style>
 </head>
 <body>
+
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Service</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
     <header>
         <h1>존슬라</h1>
         <p>SNS 데이터 가공 개발전문 기업</p>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">홈</a></li>
-            <li><a href="about.html">소개</a></li>
-            <li><a href="services.html">서비스</a></li>
-            <li><a href="contact.html" class="active">문의</a></li>
-        </ul>
-    </nav>
 
     <div class="container">
         <section class="hero" id="home">

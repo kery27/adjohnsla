@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -13,14 +12,14 @@
         }
 
         body {
-            background: linear-gradient(135deg, #e0e7ff, #f5f7fa); /* index와 동일한 블루-그레이 톤 */
-            color: #333; /* 텍스트 색상 약간 어둡게 */
+            background: #f8eee1;
+            color: #333;
             line-height: 1.6;
         }
 
         header {
-            background: #b3cde0; /* index와 동일한 연한 블루 */
-            color: #333;
+            background: #8490c8;
+            color: #f8eee1;
             padding: 2rem;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -32,9 +31,9 @@
         }
 
         nav {
-            background: #6497b1; /* index와 동일한 중간 블루 */
+            background: #f8eee1;
             padding: 1rem;
-            position: sticky; /* 네비게이션 고정 */
+            position: sticky;
             top: 0;
             z-index: 1000;
         }
@@ -47,18 +46,10 @@
         }
 
         nav a {
-            color: #fff; /* index와 동일한 흰색 */
+            color: #333;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ff8a65; /* 기존 포인트 색상 유지 */
-        }
-
-        nav .active {
-            color: #ff8a65; /* 현재 페이지 강조 */
         }
 
         .container {
@@ -75,24 +66,33 @@
             background: #fff;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* index의 feature-card와 유사 */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
             margin-bottom: 2rem;
             transition: box-shadow 0.3s;
+            display: flex; /* Flexbox로 이미지와 텍스트를 나란히 배치 */
+            align-items: center; /* 수직 중앙 정렬 */
+            gap: 2rem; /* 이미지와 텍스트 사이 간격 */
         }
 
         .service-item:hover {
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* 호버 효과 추가 */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
 
         .service-item h2 {
             font-size: 1.8rem;
-
             margin-bottom: 1rem;
         }
 
         .service-item p {
             font-size: 1.1rem;
-            line-height: 2; /* 가독성 위해 줄 간격 추가 */
+            line-height: 2;
+        }
+
+        .service-item img {
+            max-width: 200px; /* 이미지 크기 조정 */
+            height: auto;
+            border-radius: 8px; /* 모서리 둥글게 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 이미지에 약간의 그림자 */
         }
 
         footer {
@@ -105,6 +105,7 @@
             width: 100%;
         }
 
+
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
@@ -113,39 +114,53 @@
             nav a {
                 padding: 0.8rem;
             }
+            .service-item {
+                flex-direction: column; /* 모바일에서 세로 배치 */
+                text-align: center; /* 텍스트 중앙 정렬 */
+            }
             .service-item h2 {
                 font-size: 1.5rem;
             }
             .service-item p {
                 font-size: 1rem;
             }
+            .service-item img {
+                max-width: 150px; /* 모바일에서 이미지 크기 줄임 */
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>존슬라</h1>
-        <p>SNS 데이터 가공 개발전문 기업</p>
-    </header>
-
     <nav>
         <ul>
-            <li><a href="index.html">홈</a></li>
-            <li><a href="about.html">소개</a></li>
-            <li><a href="services.html" class="active">서비스</a></li> <!-- 현재 페이지 수정 -->
-            <li><a href="contact.html">문의</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <header>
+        <br>
+        <h1>존슬라가 제공하는 컨텐츠</h1>
+        <br>
+    </header>
 
     <div class="container">
         <section class="services-section">
             <div class="service-item">
-                <h2>인스타 팔로워 데이터 가공</h2>
-                <p>인스타그램 팔로워 데이터를 수집하고 분석하여 비즈니스에 유용한 인사이트를 제공합니다.</p>
+                <img src="instar.jpg" alt="인스타 팔로워 데이터 가공 이미지">
+                <div>
+                    <h2>인스타 팔로워 데이터 가공</h2>
+                    <p>인스타그램 팔로워 데이터를 수집하고 분석하여 비즈니스에 유용한 인사이트를 제공합니다.</p>
+                </div>
             </div>
             <div class="service-item">
-                <h2>기타 프로그램 제작</h2>
-                <p>고객의 니즈에 맞춘 맞춤형 프로그램을 개발하여 업무 효율성을 높입니다.</p>
+                <img src="program.jpg" alt="인스타 팔로워 데이터 가공 이미지">
+                <div>
+                    <h2>기타 프로그램 제작</h2>
+                    <p>고객의 니즈에 맞춘 맞춤형 프로그램을 개발하여 업무 효율성을 높입니다.</p>
+                </div>
+
             </div>
         </section>
     </div>
