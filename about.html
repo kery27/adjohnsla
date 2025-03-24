@@ -4,12 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>소개 - 존슬라</title>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>소개 - 존슬라</title>
     <style>
         * {
             margin: 0;
@@ -19,14 +13,14 @@
         }
 
         body {
-            background: linear-gradient(135deg, #fff3e0, #f8bbd0);
-            color: #4a4a4a;
+            background: linear-gradient(135deg, #e0e7ff, #f5f7fa); /* index와 동일한 블루-그레이 톤 */
+            color: #333; /* 텍스트 색상 약간 어둡게 */
             line-height: 1.6;
         }
 
         header {
-            background: #ffccbc;
-            color: #4a4a4a;
+            background: #b3cde0; /* index와 동일한 연한 블루 */
+            color: #333;
             padding: 2rem;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -38,8 +32,11 @@
         }
 
         nav {
-            background: #ffd54f;
+            background: #6497b1; /* index와 동일한 중간 블루 */
             padding: 1rem;
+            position: sticky; /* 네비게이션 고정 */
+            top: 0;
+            z-index: 1000;
         }
 
         nav ul {
@@ -50,14 +47,18 @@
         }
 
         nav a {
-            color: #4a4a4a;
+            color: #fff; /* index와 동일한 흰색 */
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #f06292;
+            color: #ff8a65; /* 기존 포인트 색상 유지 */
+        }
+
+        nav .active {
+            color: #ff8a65; /* 현재 페이지 강조 */
         }
 
         .container {
@@ -66,58 +67,41 @@
             padding: 0 2rem;
         }
 
-        .services-section {
+        .about-section {
             margin: 2rem 0;
         }
 
-        .service-item {
-            background: #ffffff;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
-        }
-
-        .service-item h2 {
-            color: #ff8a65;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-item p {
-            font-size: 1.1rem;
-        }
-
-        .about-section {
-            margin: 2rem 0; /* services-section과 동일한 여백 */
-        }
-
         .about-section h2 {
-            color: #ff8a65;
-            font-size: 2rem; /* services.html과 유사한 크기 */
-            margin-bottom: 2rem; /* 제목과 본문 간격 증가 */
+            font-size: 2.5rem; /* index의 hero h2와 유사하게 */
+
+            margin-bottom: 2rem;
             text-align: center;
         }
 
         .about-section h3 {
-            color: #ff8a65; /* services.html의 h2와 색상 통일 */
             font-size: 1.8rem;
-            margin: 2rem 0 1rem; /* 소제목 간격 조정 */
+
+            margin: 2rem 0 1rem;
         }
 
         .about-section p {
-            background: #ffffff; /* 카드 배경 추가로 가독성 향상 */
-            padding: 1.5rem; /* 내부 여백 증가 */
+            background: #fff;
+            padding: 1.5rem;
             border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* index의 feature-card와 유사 */
             font-size: 1.1rem;
-            margin-bottom: 2rem; /* 문단 간격 증가 */
-            line-height: 2; /* 줄 간격 더 넓게 */
+            margin-bottom: 2rem;
+            line-height: 2;
+            transition: box-shadow 0.3s;
+        }
+
+        .about-section p:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* 호버 효과 추가 */
         }
 
         footer {
-            background: #b2dfdb;
-            color: #ffffff;
+            background: #b3cde0; /* index와 동일한 연한 블루 */
+            color: #333;
             text-align: center;
             padding: 1rem;
             position: fixed;
@@ -131,10 +115,10 @@
                 gap: 1rem;
             }
             nav a {
-                padding: 0.8rem; /* 모바일에서 클릭 영역 확보 */
+                padding: 0.8rem;
             }
             .about-section h2 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
             .about-section h3 {
                 font-size: 1.5rem;
